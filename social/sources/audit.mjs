@@ -1,0 +1,22 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { execFileSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
+
+const social = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const failures = [];
+const pass = (name, ok, detail='') => { console.log(`${ok?'PASS':'FAIL'} ${name}${detail?`: ${detail}`:''}`); if(!ok) failures.push(name); };
+const dim = file => execFileSync('magick',['identify','-format','%wx%h',file],{encoding:'utf8'}).trim();
+const posts = fs.readdirSync(path.join(social,'posts')).filter(f=>f.endsWith('.png')).sort();
+pass('six posts', posts.length===6, String(posts.length));
+for(const file of posts) pass(`post ${file} dimensions`, dim(path.join(social,'posts',file))==='1080x1080',dim(path.join(social,'posts',file)));
+pass('avatar dimensions',dim(path.join(social,'avatar.png'))==='1080x1080',dim(path.join(social,'avatar.png')));
+pass('profile grid dimensions',dim(path.join(social,'profile-grid mockup.png'))==='1400x1380',dim(path.join(social,'profile-grid mockup.png')));
+pass('comparison dimensions',dim(path.join(social,'comparison','before-after.png'))==='1600x1000',dim(path.join(social,'comparison','before-after.png')));
+const docs=['bio.md','captions.md','README.md'].map(f=>fs.readFileSync(path.join(social,f),'utf8')).join('\n');
+const source=fs.readFileSync(path.join(social,'sources','generate.mjs'),'utf8');
+pass('no placeholder tokens',!/(^|\W)(lorem|ipsum|tbd|placeholder|dummy)(\W|$)/i.test(docs+source));
+pass('no numeric currency claims',!/(\$\s*\d|USD\s*\d|Bs\.?\s*\d|\d+(?:[.,]\d{2})?\s*(?:USD|dólares|bolívares))/i.test(docs+source));
+pass('Cotizar used',/Cotizar/i.test(docs+source));
+pass('conceptual/non-official labeling',/conceptual no oficial/i.test(source)&&/no oficial/i.test(docs));
+if(failures.length){console.error(`Audit failed: ${failures.join(', ')}`);process.exit(1);} console.log('AUDIT OK');

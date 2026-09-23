@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071b33">
+  <meta name="description" content="Demo no oficial de una experiencia de cotización para Distribuidora De Michele.">
+  <title>Distribuidora De Michele — Cotiza materiales</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#catalogo">Ir al catálogo</a>
+  <div class="demo-bar"><strong>DEMO / 01</strong><span>Página web demo no oficial; cotización simulada.</span></div>
+
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Distribuidora De Michele — inicio">
+      <span class="brand-mark" aria-hidden="true"><b>D</b><b>M</b></span>
+      <span><strong>DISTRIBUIDORA</strong><small>DE MICHELE, C.A.</small></span>
+    </a>
+    <nav aria-label="Navegación principal">
+      <a href="#catalogo">Catálogo</a><a href="#como-funciona">Cómo comprar</a><a href="#sucursales">Sucursales</a>
+    </nav>
+    <button class="basket-button" type="button" data-open-basket aria-label="Abrir cotización, 0 productos">
+      <span>COTIZACIÓN</span><b data-cart-count>0</b>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> VALENCIA · MARACAY</p>
+        <h1 id="hero-title">TU OBRA.<br><em>BIEN RESUELTA.</em></h1>
+        <p class="hero-lede">Materiales, ferretería y granito para construir, renovar y equipar. Arma tu lista y solicita una cotización según tu proyecto.</p>
+        <div class="hero-actions"><a class="button primary" href="#catalogo">VER CATÁLOGO <span>↓</span></a><button class="button ghost" type="button" data-open-basket>COTIZAR AHORA <span>→</span></button></div>
+      </div>
+      <div class="hero-panel">
+        <div class="spec-label">SERVICIO / 2026</div>
+        <div class="hero-photo"><img src="assets/images/product-04.jpg" alt="Muestra de encimeras de granito y cuarzo" width="1153" height="1432"></div>
+        <div class="hero-stats">
+          <span><b>02</b><small>SUCURSALES</small></span>
+          <span><b>L–S</b><small>ATENCIÓN</small></span>
+          <span><b>100%</b><small>COTIZABLE</small></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Beneficios">
+      <span><i>01</i> VENTA AL MAYOR</span><span><i>02</i> AMPLIA SELECCIÓN DE GRANITO</span><span><i>03</i> ESTACIONAMIENTO</span><span><i>04</i> RETIRO EN TIENDA</span>
+    </section>
+
+    <section class="catalog-section" id="catalogo" aria-labelledby="catalog-title">
+      <div class="section-heading">
+        <div><p class="eyebrow"><span></span> INVENTARIO DESTACADO</p><h2 id="catalog-title">ENCUENTRA LO QUE<br>NECESITA TU PROYECTO.</h2></div>
+        <p>Sin precios publicados: selecciona los productos y recibe una cotización personalizada.</p>
+      </div>
+
+      <div class="catalog-tools">
+        <label class="search"><span aria-hidden="true">⌕</span><span class="sr-only">Buscar productos</span><input id="search-input" type="search" placeholder="Buscar producto o categoría…" autocomplete="off"><kbd>⌘ K</kbd></label>
+        <div class="category-list" role="group" aria-label="Filtrar por categoría">
+          <button class="active" type="button" data-category="Todos">Todos</button>
+          <button type="button" data-category="Construcción">Construcción</button>
+          <button type="button" data-category="Pintura">Pintura</button>
+          <button type="button" data-category="Granito">Granito</button>
+          <button type="button" data-category="Ferretería">Ferretería</button>
+        </div>
+      </div>
+
+      <p class="results-line"><span data-result-count>6</span> RESULTADOS <span aria-hidden="true">——</span> PRECIOS POR COTIZACIÓN</p>
+      <div class="product-grid" id="product-grid" aria-live="polite"></div>
+      <div class="empty-state" id="empty-state" hidden><strong>SIN COINCIDENCIAS</strong><p>Prueba otra palabra o restablece los filtros.</p><button class="text-button" type="button" data-reset-filters>Ver todo el catálogo</button></div>
+    </section>
+
+    <section class="trade-banner" aria-label="Venta mayorista">
+      <div><p class="eyebrow light"><span></span> ATENCIÓN A PROFESIONALES</p><h2>¿COMPRAS PARA<br>UNA OBRA COMPLETA?</h2></div>
+      <div><p>Cotizamos requerimientos al mayor para constructores, maestros de obra y proyectos comerciales.</p><button class="button white" type="button" data-open-basket>ARMAR COTIZACIÓN <span>→</span></button></div>
+      <span class="trade-number" aria-hidden="true">MAYOR</span>
+    </section>
+
+    <section class="process" id="como-funciona" aria-labelledby="process-title">
+      <div class="section-heading"><div><p class="eyebrow"><span></span> COMPRA SIN COMPLICACIONES</p><h2 id="process-title">DE TU LISTA<br>A LA TIENDA.</h2></div></div>
+      <div class="steps">
+        <article><b>01</b><span class="step-icon" aria-hidden="true">＋</span><h3>ARMA TU LISTA</h3><p>Agrega productos y cantidades según tu proyecto.</p></article>
+        <article><b>02</b><span class="step-icon" aria-hidden="true">⌁</span><h3>RECIBE COTIZACIÓN</h3><p>Selecciona sucursal. La solicitud real se coordina por WhatsApp.</p></article>
+        <article><b>03</b><span class="step-icon" aria-hidden="true">✓</span><h3>PAGA Y RETIRA</h3><p>Tras confirmar monto y disponibilidad, paga en línea y retira en tienda.</p></article>
+      </div>
+      <p class="terms-note"><strong>CASHEA</strong> es promocionada por el negocio. Disponibilidad, cupo y condiciones deben confirmarse directamente antes de comprar.</p>
+    </section>
+
+    <section class="branches" id="sucursales" aria-labelledby="branches-title">
+      <div class="branch-intro"><p class="eyebrow light"><span></span> VISÍTANOS</p><h2 id="branches-title">DOS CIUDADES.<br>UN MISMO SERVICIO.</h2><p>Lunes a viernes de 7:00 a 16:00<br>Sábados de 7:00 a 14:00</p></div>
+      <article class="branch-card featured"><span>01 / CARABOBO</span><h3>VALENCIA</h3><p>Sector San Blas, Av. Padre Alexandre,<br>Local 101-68</p><dl><div><dt>WhatsApp 1</dt><dd>+58 414-8730910</dd></div><div><dt>WhatsApp 2</dt><dd>+58 412-8887851</dd></div></dl><button type="button" class="branch-select" data-branch="valencia">COTIZAR AQUÍ <span>→</span></button></article>
+      <article class="branch-card"><span>02 / ARAGUA</span><h3>MARACAY</h3><p>Consulta la ubicación exacta directamente con la sucursal.</p><dl><div><dt>WhatsApp</dt><dd>+58 414-4194351</dd></div></dl><button type="button" class="branch-select" data-branch="maracay">COTIZAR AQUÍ <span>→</span></button></article>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="./"><span class="brand-mark" aria-hidden="true"><b>D</b><b>M</b></span><span><strong>DISTRIBUIDORA</strong><small>DE MICHELE, C.A.</small></span></a><p>Materiales de construcción · Ferretería · Granito</p><p class="footer-demo">DEMO NO OFICIAL · SIN TRANSACCIONES REALES</p></footer>
+
+  <div class="overlay" data-close-ui hidden></div>
+  <aside class="basket-drawer" aria-labelledby="basket-title" aria-hidden="true">
+    <div class="drawer-head"><div><p class="eyebrow"><span></span> SOLICITUD LOCAL</p><h2 id="basket-title">TU COTIZACIÓN</h2></div><button class="icon-button" type="button" data-close-ui aria-label="Cerrar cotización">×</button></div>
+    <div class="drawer-progress"><span class="active">1. LISTA</span><span>2. SUCURSAL</span><span>3. CONFIRMACIÓN</span></div>
+    <div class="drawer-body">
+      <div id="basket-items"></div>
+      <div class="basket-empty" id="basket-empty"><b>LISTA VACÍA</b><p>Agrega productos del catálogo para preparar tu solicitud.</p><button type="button" class="button dark" data-close-ui>EXPLORAR CATÁLOGO</button></div>
+      <form id="quote-form" hidden novalidate>
+        <fieldset><legend>ELIGE SUCURSAL DE RETIRO</legend><label class="radio-card"><input type="radio" name="branch" value="valencia" checked><span><b>VALENCIA</b><small>San Blas · 2 líneas de WhatsApp</small></span><i>✓</i></label><label class="radio-card"><input type="radio" name="branch" value="maracay"><span><b>MARACAY</b><small>1 línea de WhatsApp</small></span><i>✓</i></label></fieldset>
+        <label class="field"><span>NOMBRE / EMPRESA</span><input name="customer" type="text" required autocomplete="name" placeholder="¿A nombre de quién cotizamos?"></label>
+        <label class="field"><span>NOTA DEL PROYECTO <em>OPCIONAL</em></span><textarea name="notes" rows="3" placeholder="Medidas, presentación o requerimientos…"></textarea></label>
+        <label class="consent"><input type="checkbox" name="ack" required><span>Entiendo que esta es una simulación local y no se enviará información.</span></label>
+        <p class="form-error" role="alert" hidden>Completa tu nombre y confirma que entiendes el carácter simulado.</p>
+        <button class="button primary full" type="submit">GENERAR CONFIRMACIÓN LOCAL <span>→</span></button>
+        <p class="privacy-note">No se contactará a WhatsApp ni se procesará ningún pago.</p>
+      </form>
+      <section class="confirmation" id="confirmation" hidden aria-live="polite"><span class="confirmation-mark">✓</span><p class="eyebrow"><span></span> SOLICITUD PREPARADA</p><h3>LISTA PARA<br>REVISAR.</h3><p>Tu referencia local es <strong id="confirmation-id"></strong>. Esta demo no envió datos ni reservó inventario.</p><div id="confirmation-summary"></div><button class="button dark full" type="button" data-new-quote>NUEVA COTIZACIÓN</button></section>
+    </div>
+    <div class="drawer-foot" id="drawer-foot"><div><span>TOTAL</span><strong>COTIZAR</strong></div><button class="button primary" type="button" id="continue-button">CONTINUAR <span>→</span></button></div>
+  </aside>
+
+  <dialog class="product-dialog" id="product-dialog" aria-labelledby="detail-title"><button class="icon-button dialog-close" type="button" data-close-detail aria-label="Cerrar detalle">×</button><div class="detail-image"><img id="detail-image" src="assets/images/product-01.jpg" alt=""></div><div class="detail-copy"><p class="eyebrow"><span></span> <span id="detail-category"></span></p><h2 id="detail-title"></h2><p id="detail-description"></p><ul id="detail-features"></ul><div class="detail-meta"><span>PRECIO <b>COTIZAR</b></span><span>RETIRO <b>EN TIENDA</b></span></div><button class="button primary full" id="detail-add" type="button">AGREGAR A COTIZACIÓN <span>＋</span></button><small>Disponibilidad, presentación y precio sujetos a confirmación.</small></div></dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

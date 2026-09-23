@@ -1,0 +1,13 @@
+{
+  "name": "korali-distdemichele-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local-only storefront demo for Distribuidora De Michele",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check:js": "node --check assets/app.js && node --check worker.js",
+    "check:static": "node scripts/qa-static.mjs",
+    "check:browser": "node scripts/qa-browser.mjs",
+    "qa": "npm run check:js && npm run check:static && npm run check:browser"
+  }
+}

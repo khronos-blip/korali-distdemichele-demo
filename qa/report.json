@@ -1,0 +1,119 @@
+{
+  "status": "PASS",
+  "url": "/demos/de-michele/",
+  "checks": [
+    {
+      "name": "six products render",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "disclosure visible",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "quote price language visible",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "category filter",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "search filter",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "product detail opens",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "two items added",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "cart persists after reload",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "basket renders persisted items",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "local confirmation completes",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "selected branch confirmed",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "confirmation hides navigation footer",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "zero fetch/XHR calls",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "zero external requests",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "zero console errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "zero page errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "zero failed requests",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "no mobile horizontal overflow",
+      "pass": true,
+      "detail": "{\"scrollWidth\":390,\"innerWidth\":390}"
+    },
+    {
+      "name": "mobile catalog renders",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile basket opens",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "screenshots": [
+    "qa/screenshots/desktop-home.png",
+    "qa/screenshots/desktop-detail.png",
+    "qa/screenshots/desktop-basket.png",
+    "qa/screenshots/desktop-confirmation.png",
+    "qa/screenshots/mobile-home.png",
+    "qa/screenshots/mobile-basket.png"
+  ],
+  "consoleErrors": [],
+  "pageErrors": [],
+  "failedRequests": [],
+  "externalRequests": [],
+  "apiCalls": 0
+}
